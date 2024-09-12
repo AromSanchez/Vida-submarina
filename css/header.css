@@ -6,7 +6,7 @@ header{
     position: relative;
     z-index: 2;
     display: flex;
-    width: 230px;
+    width: 240px;
     color: white;
     height: 100vh;
     flex-direction: column;
@@ -22,8 +22,9 @@ header{
     opacity: 0;
     transform: translateY(20px); 
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-
-
+    display: flex;
+    align-items: center;
+    justify-self: center;
     & h1{
         font-size: 60px;
         background-image: url('/img/fondo-h1.jpg'); 
@@ -33,6 +34,7 @@ header{
         color: transparent; 
         width: 100%;
         text-align: center;
+        font-family: 'fuente';
     }
 }
 nav{
