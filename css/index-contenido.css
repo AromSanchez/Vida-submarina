@@ -48,14 +48,12 @@ main{
                 opacity: 0;
                 transform: translateY(10px);
                 transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-                outline: 3px solid red;
             }
         }
         & .imagenes{
             width: 30%;
             max-height: 80vh;
             overflow: hidden;
-            outline: 3px solid red;
             border-radius: 30px;
             & .carousel-item{
                 width: 100%;
