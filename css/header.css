@@ -51,7 +51,6 @@ header{
 
 @media (width < 1024px){
     header{
-        outline: 3px solid red;
         align-items: center;
         height: auto;
         flex-direction: column;
@@ -63,7 +62,6 @@ header{
             & .frame{
                 display: block;
             }
-            outline: 3px solid black;
             width: 100%;
             display: flex;
             justify-content: space-around;
