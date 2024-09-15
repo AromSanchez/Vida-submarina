@@ -1,12 +1,15 @@
-const div = document.querySelector('.center')
-const menu = document.querySelector('.opciones-desplegado')
+const div = document.querySelector('.center');
+const menu = document.querySelector('.opciones-desplegado');
+const main = document.querySelector('.main');
+
 div.addEventListener('click', () => {
-    div.classList.toggle('animated')
-    if (menu.style.opacity === '1') {
-        menu.style.opacity = '0';
-        menu.style.transform = 'translateX(-150px)';
-      } else {
-        menu.style.opacity = '1';
-        menu.style.transform = 'translateX(0)';
-      }
-})
+    div.classList.toggle('animated');
+
+    const computedHeight = getComputedStyle(menu).height;
+
+    if (computedHeight === '0px') {
+        menu.style.height = '300px';
+    } else {
+        menu.style.height = '0';
+    }
+});
