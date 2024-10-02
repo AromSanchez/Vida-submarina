@@ -1,13 +1,13 @@
 header{
     width: 100%;
-    height: 90px;
+    height: 70px;
     display: flex;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.295);
     box-shadow: 0px 2px 20px 1px rgba(0, 0, 0, 0.404);
     & .logo{
         & img{
-            width: 170px;
+            width: 100px;
         }
         & .frame{
             display: none;
@@ -22,7 +22,7 @@ header{
 
         & a{
             display: flex;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             flex-direction: column;
             align-items: center;
@@ -30,7 +30,7 @@ header{
             text-decoration: none;
             &:hover span{
                 opacity: 1;
-                transform: translateY(27px);
+                transform: translateY(13px);
             }
             & span{
                 position: absolute;
@@ -41,7 +41,7 @@ header{
             }
             
             & img{
-                width: 40px;
+                width: 30px;
             }
         }
     }
@@ -52,12 +52,12 @@ header{
 @media (width < 1024px){
     header{
         align-items: center;
-        height: auto;
+        height: 70px;
         flex-direction: column;
         position: relative;
         & .logo{
             & img{
-                width: 130px;
+                width: 100px;
             }
             & .frame{
                 display: block;
@@ -74,7 +74,7 @@ header{
             height: 0;
             overflow: hidden;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             top: 100%;
             backdrop-filter: blur(10px); 

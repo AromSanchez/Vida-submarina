@@ -8,7 +8,7 @@ div.addEventListener('click', () => {
     const computedHeight = getComputedStyle(menu).height;
 
     if (computedHeight === '0px') {
-        menu.style.height = '300px';
+        menu.style.height = '260px';
     } else {
         menu.style.height = '0';
     }
