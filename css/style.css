@@ -7,11 +7,8 @@
 
 }
 
-:root {
-    --fuente-principal: 'fuente';
-}
 body{
-    background-image: url(/img/index-fondo.png);
+    background-image: url(/img/index-fondo.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -22,10 +19,6 @@ body{
     flex-direction: column;
 }
 
-@font-face {
-    font-family: 'fuente';
-    src: url('/img/fonts/JejuHallasan-Regular.ttf');
-}
 
 
 /* PRELOAD  ///////////////////////////////////////// */
@@ -36,7 +29,7 @@ body.loaded .titulo{
     transform: translateY(0)
 }
 
-body.loaded nav{
+body.loaded header{
     opacity: 1;
     transform: translateX(0)
 }
