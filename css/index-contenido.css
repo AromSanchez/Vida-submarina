@@ -110,26 +110,21 @@ main {
     & dialog::backdrop{
         background-color: rgba(0, 0, 0, 0.74);
     }
+    .celular_video{
+        display: none;
+    }
 }
 
 
-@keyframes flotante {
-    0% {
-        transform: translateY(0px);
+@media (max-width: 768px){
+    .btn_play{
+        display: none ;
     }
-
-    50% {
-        transform: translateY(-12px);
+    .celular_video{
+        margin-top: 50px;
+        border-radius: 10px;
+        display: block !important;
     }
-
-    100% {
-        transform: translateY(0);
-    }
-
-}
-
-
-@media (width < 768px){
     main{
         & .titulo{
             & h1{
