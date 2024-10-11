@@ -1,5 +1,3 @@
 window.addEventListener('load', function () {
-    setTimeout(function () {
-      document.body.classList.add('loaded'); 
-    }, 1); 
+  document.body.classList.add('loaded');
 });

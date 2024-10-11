@@ -1,0 +1,34 @@
+:root{
+    --principal: #2196F3;
+    --secundario: #0159C0;
+}
+
+.section-3{
+    width: 100%;
+    height: auto;
+}
+.section-3_header{
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 3s ease;
+
+    & h2{
+        font-size: 40px;
+        color: var(--principal);
+    }
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img{
+        width: 18vw;
+    }
+}
+.section-3_contenido{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
