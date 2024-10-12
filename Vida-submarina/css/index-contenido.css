@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+
+main {
+    justify-content: flex-start;
+    align-items: center;
+
+    .titulo {
+        margin-top: 40px;
+        text-align: center;
+        font-weight: bold;
+        z-index: -2;
+        width: 100vw;
+
+        & h1 {
+            color: #ffffff;
+            font-size: 8vw;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                filter: blur(40px);
+                height: 100%;
+                background-color: black;
+                z-index: -1;
+
+            }
+        }
+
+        & span {
+            line-height:150px;
+            margin-left: 20px;
+            font-size: 11vw;
+            letter-spacing: 25px;
+            background: linear-gradient(180deg, #FFFFFFA8 23%, #1638f591 90%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    & .btn_explorar{
+        margin-top: 3vw;
+        display: flex;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.616);
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 5px 20px;
+        font-weight: bold;
+        color: #ffffff;
+        cursor: pointer;
+        text-decoration: none;
+        & img{
+            width: 20px;
+            margin-left: 10px;
+        }
+    }
+    & .btn_play{
+        background-color: transparent;
+        border: none;
+        margin-top: 30px;
+        & .icono-play{
+            width: 60px;
+    
+        }
+    }
+    dialog{
+        border-radius: 10px;
+        border: none;
+        top: 50%;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        background-color: #1d1d1d;
+        & iframe{
+            width: 50vw;
+            height: 60vh;
+        }
+        & button{
+            width: 100%;
+            box-shadow: 0px 0px 10px 1px red;
+            border: none;
+            font-size: 15px;
+            color: white;
+            background-color: rgb(247, 51, 51);
+            border-radius: 5px;
+            padding: 5px 10px;
+            &:hover{
+                background-color: rgb(252, 6, 6);
+            }
+        }
+    }
+    & dialog::backdrop{
+        background-color: rgba(0, 0, 0, 0.74);
+    }
+    .celular_video{
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px){
+    .btn_explorar{
+        width: 80%;
+        height: 10vw;
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+    }
+    .btn_play{
+        display: none ;
+    }
+    .celular_video{
+        height: 25vh;
+        width: 80vw;
+        margin-top: 17vw;
+        border-radius: 10px;
+        display: block !important;
+    }
+    main{
+        & .titulo{
+            & h1{
+                font-size: 55px;
+            }
+            & span{
+                font-size: 13vw;
+                letter-spacing: 5px;
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+body{
+    background-image: url(/img/index-fondo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1400px) {
+    body .titulo h1::after {
+        filter: blur(3vw);
+    }
+
+    body .titulo span {
+        letter-spacing: 2.6vw;
+        line-height: 15vw;
+    }
+    body main .btn_explorar{
+        & img{
+            width: 1.4vw;
+            margin-left: 10px;
+        }
+        font-size: 1.5vw;
+        padding: 0.5vw 1vw;
+        border-radius: 0.5vw;
+    }
+    body .btn_play .icono-play{
+        width: 4vw ;
+    }
+    body .btn_play{
+        margin-top: 2vw;
+        width: 4vw;
+        height: 4vw;
+    }
+}

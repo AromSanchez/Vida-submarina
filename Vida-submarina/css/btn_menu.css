@@ -1,0 +1,106 @@
+
+.frame {
+    position: relative;
+    width: 50px;
+    height: 50px; 
+    border-radius: 2px;
+      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    color: #333;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+}
+  
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+  }
+  
+  .linea{
+      width: 30px;
+      border-radius: 10px;
+      height: 4px;
+      background-color: white;
+      margin: 6px;
+      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2);
+      transition: all 0.6s ease;
+  }
+  .primero{
+      animation: inicio-1 0.6s ease both;
+  }
+  .tercero{
+      animation: inicio-3 0.6s ease both;
+  }
+  .animated .primero{
+      animation: final-1 0.6s ease both;
+  }
+  
+  
+  .animated .segundo{
+      scale: 0.2;
+      background-color: transparent;
+      box-shadow: 0 0 0 transparent;
+  }
+  
+  .animated .tercero{
+      animation: final-3 0.6s ease both;
+  }
+  
+  @keyframes inicio-1 {
+      0% {
+          transform: translateY(10px) rotate(45deg);
+      }
+      50%{
+          transform: rotate(0deg) translateY(10px);
+      }
+      100%{
+          transform: rotate(0deg) translateY(0px);
+      }
+  }
+  @keyframes inicio-3{
+      100% {
+          transform: rotate(0deg) translateY(0px);
+      }
+      50%{
+          transform: rotate(0deg) translateY(-10px);
+      }
+      0% {
+          transform: translateY(-10px) rotate(135deg);
+        }
+  }
+  
+  @keyframes final-1{
+      0% {
+          transform: translateY(0px);
+      }
+      50%{
+          transform: translateY(10px);
+      }
+      100% {
+          transform: translateY(10px) rotate(45deg);
+        }
+  }
+  
+  @keyframes final-3{
+      0% {
+          transform: translateY(0px);
+      }
+      50%{
+          transform: translateY(-10px);
+      }
+      100% {
+          transform: translateY(-10px) rotate(135deg);
+        }
+  }
+  
+  @keyframes centro {
+      0%{
+          scale: 0.2;
+      }
+      100%{
+          scale: 1;
+      }
+  }
+  

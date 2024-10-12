@@ -1,0 +1,72 @@
+.equipo {
+    position: relative;
+    top: -50px; 
+    text-align: center;
+}
+
+.equipo h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 100; 
+    padding: 10px 20px;
+    border-radius: 10px; 
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    padding-top: 300px; 
+}
+
+
+.tarjeta {
+    background-color: #0177b9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tarjeta h2 {
+    font-size: 24px;
+    color: #0177b9;
+    margin: 15px 0 5px;
+    font-weight: bold;
+
+}
+
+.tarjeta p {
+    font-size: 14px; 
+    line-height: 1.6; 
+    color: #ffffff; 
+    font-weight: normal; 
+    text-align: justify; 
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); 
+
+.tarjeta p:first-of-type {
+    font-weight: bold; 
+    font-size: 16px; 
+    text-align: center; 
+}
+
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+}
