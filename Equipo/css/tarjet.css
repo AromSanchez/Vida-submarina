@@ -45,7 +45,7 @@
 
 .tarjeta h2 {
     font-size: 24px;
-    color: #0177b9;
+    color: #ffffff;
     margin: 15px 0 5px;
     font-weight: bold;
 
@@ -65,7 +65,7 @@
     font-size: 16px; 
     text-align: center; 
 }
-
+}
 
 .tarjeta:hover {
     transform: translateY(-10px);
