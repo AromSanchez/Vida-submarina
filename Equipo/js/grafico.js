@@ -1,26 +1,36 @@
 let slideIndex = 0;
-const slides = document.querySelectorAll('.carousel-slide img');
-const dots = document.querySelectorAll('.dot');
-const totalSlides = slides.length;
+showSlides(slideIndex);
 
-function moveSlide(n) {
-    slideIndex = (slideIndex + n + totalSlides) % totalSlides;
-    updateCarousel();
+// Función para mostrar las diapositivas
+function showSlides(n) {
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n >= slides.length) { slideIndex = 0; }
+    if (n < 0) { slideIndex = slides.length - 1; }
+
+    // Ocultar todas las diapositivas
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // Quitar la clase "active" de todos los puntos
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    // Mostrar la diapositiva actual y añadir "active" al punto correspondiente
+    slides[slideIndex].style.display = "block";
+    dots[slideIndex].className += " active";
 }
 
+// Controlador de los puntos para cambiar la diapositiva actual
 function currentSlide(n) {
-    slideIndex = n;
-    updateCarousel();
+    showSlides(slideIndex = n);
 }
 
-function updateCarousel() {
-    const carouselSlide = document.getElementById('carousel-slide');
-    const slideWidth = slides[0].clientWidth;
-    carouselSlide.style.transform = `translateX(${-slideIndex * slideWidth}px)`;
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[slideIndex].classList.add('active');
-}
-
-setInterval(() => {
-    moveSlide(1);
-}, 3000);
+// Cambiar automáticamente de diapositiva cada 5 segundos
+setInterval(function() {
+    slideIndex++;
+    showSlides(slideIndex);
+}, 5000); // Cambia cada 5 segundos
