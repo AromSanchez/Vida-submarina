@@ -1,5 +1,7 @@
 :root {
     --principal: #2196F3;
+    --secundario: #0159C0;
+
 }
 
 header {
@@ -29,6 +31,13 @@ header {
     background-image: url(/problematica/img/peces.svg);
     background-position: center;
     background-repeat: no-repeat;
+}
+.equipo{
+    & .miembros{
+        font-size: 50px;
+        color: #0159C0 !important;
+        text-shadow: 2px 3px 10px white;
+    }
 }
 
 .wave {
