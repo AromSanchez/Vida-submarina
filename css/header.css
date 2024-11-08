@@ -1,5 +1,5 @@
 header{
-    z-index: 100;
+    z-index: 200;
     opacity: 0;
     transform: translateY(-20px);
     transition: all 1s ease;
