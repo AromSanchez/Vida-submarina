@@ -9,57 +9,49 @@ header {
 }
 
 .section-1 {
-    background-color: var(--principal);
+    background-image: url(/Equipo/img-tar/header-equipo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 25vw;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    mask-image: none;
+    height: 450px;;
+    mask-image: linear-gradient(black 80%, transparent);
 }
 
 .section-1 h1 {
     color: white;
-    font-size: 55px;
-}
-
-.section-1 .peces {
-    margin-top: 20px;
-    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    width: 200px;
+    text-align: center;
     height: 100px;
-    background-image: url(/problematica/img/peces.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.equipo{
-    & .miembros{
-        font-size: 50px;
-        color: #0159C0 !important;
-        text-shadow: 2px 3px 10px white;
+    &::after{
+        content: "";
+        background-color: rgba(0, 0, 0, 0.473);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        filter: blur(20px);
+        z-index: -1;
     }
 }
 
-.wave {
-    z-index: -1;
-    position: absolute;
-    top: 25vw;
-    left: 0;
-    width: 300%;
-    height: 189px;
-    background-image: url(/problematica/img/wd1.svg);
-    background-position: bottom;
-    background-repeat: repeat-x;
-    animation: w1 6s linear infinite;
-}
 
-.section-2 {
-    margin-top: 9vw;
-    width: 100%;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-}
+
 
 
 .section-3_header {
