@@ -1,0 +1,296 @@
+<html>
+
+<head>
+    <title>Acción</title>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            font-size: 2em;
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+
+        .banner {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .banner p {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            color: #1a73e8;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card ul li {
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .card ul li i {
+            color: #34a853;
+            margin-right: 10px;
+        }
+
+        #map {
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .event {
+            font-size: 1em;
+            color: #333;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 48%;
+            margin-bottom: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .project-card h3 {
+            font-size: 1.2em;
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .project-card button {
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .project-card button:hover {
+            background-color: #1558b0;
+        }
+
+        @media (max-width: 768px) {
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+
+            <img src="/img/logo.png" alt="">
+            <div class="frame">
+                <div class="center">
+                    <div class="linea primero"></div>
+                    <div class="linea segundo"></div>
+                    <div class="linea tercero"></div>
+                </div>
+            </div>
+
+        </div>
+        <nav class="opciones-desplegado">
+
+            <a href="/index.html"><img src="/img/icons/house.png"><span>Inicio</span></a>
+            <a href="/problematica/problematica.html"><img src="/img/icons/warning.png"><span>Problematica</span></a>
+            <a href="/Accion/accion.html"><img src="/img/icons/soluciones.png"><span>Soluciones</span></a>
+            <a href="/recursos/tarjeta.html"><img src="/img/icons/recursos.png"><span>Recursos</span></a>
+            <a href="/Equipo/equipo.html"><img src="/img/icons/team.png"><span>Equipo</span></a>
+
+        </nav>
+    </header>
+    <div class="container">
+        <div class="header">Acción</div>
+        <div class="banner">
+            <p>El océano necesita nuestra ayuda. Cada pequeña acción cuenta para proteger la vida marina y asegurar un
+                futuro sostenible. ¿Estás listo para actuar?</p>
+        </div>
+        <div class="card">
+            <h2>Eventos y Campañas</h2>
+            <div id="map"></div>
+            <div class="event">
+                <p><i class="fas fa-map-marker-alt"></i> Limpieza de playa - 17/01/2025</p>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Acciones Concretas</h2>
+            <ul>
+                <li><i class="fas fa-check-circle"></i>Reducir el uso de plásticos: Usa bolsas reutilizables y evita
+                    productos de un solo uso.</li>
+                <li><i class="fas fa-check-circle"></i>Participar en limpiezas de playas: Súmate a iniciativas locales
+                    de recolección de basura.</li>
+                <li><i class="fas fa-check-circle"></i>Apoyar proyectos de conservación: Dona a organizaciones dedicadas
+                    a la protección de la vida marina.</li>
+                <li><i class="fas fa-check-circle"></i>Consumir productos sostenibles: Elige alimentos y productos
+                    certificados como eco-friendly.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Proyectos de Conservación</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="https://storage.googleapis.com/a1aa/image/RcmVL1yaCkaaEp5MuWjW7yiOGkQsx3QD6yKtAqdeLDhJgC5JA.jpg"
+                        alt="Imagen del Proyecto Posidonia">
+                    <h3>Proyecto Posidonia</h3>
+                    <p>Restauración de praderas marinas en el Mediterráneo. Este proyecto se centra en la recuperación
+                        de las praderas de Posidonia oceanica, una planta marina endémica del Mediterráneo que juega un
+                        papel crucial en la salud del ecosistema marino.</p>
+                    <button onclick="window.location.href='https://example.com/proyecto-posidonia'">Leer más</button>
+                </div>
+                <div class="project-card">
+                    <img src="https://storage.googleapis.com/a1aa/image/4w87fAzPaS3cKS7boC5CaxSZD4CXPmNR5Umyigq55lxHgC5JA.jpg"
+                        alt="Imagen del Rescate de Tortugas">
+                    <h3>Rescate de Tortugas</h3>
+                    <p>Protección y rehabilitación de tortugas marinas. Este proyecto se dedica al rescate,
+                        rehabilitación y liberación de tortugas marinas heridas o enfermas, así como a la protección de
+                        sus hábitats naturales.</p>
+                    <button onclick="window.location.href='https://example.com/rescate-de-tortugas'">Leer más</button>
+                </div>
+                <div class="project-card">
+                    <img src="https://storage.googleapis.com/a1aa/image/huauVYAttCZDBRuJ6EbQuSaMLbdta9TOTPr5UFPAqpQDQh8E.jpg"
+                        alt="Imagen del Coral Guardian">
+                    <h3>Coral Guardian</h3>
+                    <p>Restauración de arrecifes de coral en Indonesia. Este proyecto trabaja en la restauración de
+                        arrecifes de coral dañados, promoviendo la biodiversidad marina y la sostenibilidad de las
+                        comunidades locales.</p>
+                    <button onclick="window.location.href='https://example.com/coral-guardian'">Leer más</button>
+                </div>
+                <div class="project-card">
+                    <img src="https://storage.googleapis.com/a1aa/image/3KZ6KQSqHcpHMNTqi4RIjmexN3RXeft65PSYXcOtZBGiAKknA.jpg"
+                        alt="Imagen del Océanos Sin Plástico">
+                    <h3>Océanos Sin Plástico</h3>
+                    <p>Iniciativa global para reducir la contaminación plástica. Este proyecto se enfoca en la reducción
+                        de residuos plásticos en los océanos a través de campañas de concienciación, limpieza de playas
+                        y promoción de alternativas sostenibles.</p>
+                    <button onclick="window.location.href='https://example.com/oceanos-sin-plastico'">Leer más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script>
+        var map = L.map('map').setView([-8.145097503370796, -79.05653641975886], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var destination = L.marker([-8.145097503370796, -79.05653641975886]).addTo(map)
+            .bindPopup('Limpieza de playa - 17/01/2025')
+            .openPopup();
+
+        map.locate({ setView: true, maxZoom: 16 });
+
+        function onLocationFound(e) {
+            var radius = e.accuracy / 2;
+
+            var userLocation = L.marker(e.latlng).addTo(map)
+                .bindPopup("Tu ubicación").openPopup();
+
+            L.circle(e.latlng, radius).addTo(map);
+
+            L.Routing.control({
+                waypoints: [
+                    L.latLng(e.latlng),
+                    L.latLng(-8.145097503370796, -79.05653641975886)
+                ],
+                routeWhileDragging: true,
+                createMarker: function (i, wp, nWps) {
+                    if (i === 0) {
+                        return L.marker(wp.latLng).bindPopup("Tu ubicación").openPopup();
+                    } else if (i === nWps - 1) {
+                        return L.marker(wp.latLng).bindPopup("Limpieza de playa").openPopup();
+                    }
+                },
+                show: false
+            }).addTo(map);
+        }
+
+        function onLocationError(e) {
+            alert(e.message);
+        }
+
+        map.on('locationfound', onLocationFound);
+        map.on('locationerror', onLocationError);
+    </script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
