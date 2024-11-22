@@ -1,6 +1,6 @@
 .equipo {
     position: relative;
-    top: -50px; 
+    top: 0px; 
     text-align: center;
 }
 
@@ -21,7 +21,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px; 
-    padding-top: 100px; 
+    margin-top: 90px; 
 }
 
 
