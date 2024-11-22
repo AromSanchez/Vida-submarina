@@ -4,6 +4,9 @@
 header{
     position: fixed;
 }
+body{
+    background-color: #043775;
+}
 .section-1{
     background-color: var(--principal);
     width: 100%;
@@ -59,5 +62,28 @@ header{
     }
     .section-1 h1{
         font-size: 4vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .section-1 {
+        height: 40vw; 
+        gap: 10px; 
+        justify-content: center;
+        mask-image: linear-gradient(black 80%, transparent);
+    }
+
+    .section-1 h1 {
+        font-size: 7vw; 
+        text-align: center; /* Centrar el texto */
+        margin-top: 40px;
+    }
+
+    .section-1 .peces {
+        display: none;
+    }
+
+    .wave {
+        display: none;
     }
 }

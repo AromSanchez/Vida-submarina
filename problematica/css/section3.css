@@ -14,8 +14,8 @@
     transition: all 3s ease;
 
     & h2 {
-        font-size: 40px;
-        color: var(--principal);
+        font-size: 3.5vw;
+        color: white;
     }
 
     width: 100%;
@@ -101,11 +101,5 @@
     .card {
         width: 100%;
         max-width: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .wave{
-        display: none;
     }
 }

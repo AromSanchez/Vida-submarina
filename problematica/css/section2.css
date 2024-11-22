@@ -154,3 +154,89 @@ main{
 .section-contenido.active {
     display: block; 
 }
+
+
+@media (max-width: 900px) {
+    .section-2_nav {
+        flex-direction: column;
+        margin-top: 2vw;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .section-2_nav button {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 16px;
+        height: 40px;
+    }
+
+    .section-2_contenido {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    .section-2_inicial h2 {
+        font-size: 28px;
+    }
+
+    .section-2_inicial p {
+        font-size: 18px;
+    }
+
+    .datos {
+        flex-direction: column;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .dato-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .section-2_soluciones ul {
+        margin-left: 20px;
+    }
+
+    .section-2_soluciones ul li {
+        font-size: 16px;
+    }
+
+    .section-2_fuentes a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 900px) {
+    .section-2_nav button {
+        font-size: 14px;
+        height: 35px;
+    }
+
+    .section-2_contenido {
+        width: 90%;
+    }
+
+    .section-2_inicial h2 {
+        font-size: 24px;
+    }
+
+    .section-2_inicial p {
+        font-size: 16px;
+    }
+
+    .datos {
+        flex-direction: column;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .dato-item {
+        width: 80%;
+    }
+
+    .section-2_soluciones ul li {
+        font-size: 14px;
+    }
+}

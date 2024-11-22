@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/btn_menu.css">
     <link rel="stylesheet" href="/css/style.css">
     <style>
         body {
@@ -14,6 +15,9 @@
             background-color: #f0f4f8;
             margin: 0;
             padding: 0;
+            background-image: url(/Accion/fondo.png);
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .container {
@@ -25,14 +29,16 @@
 
         .header {
             text-align: center;
-            font-size: 2em;
-            color: #1a73e8;
+            font-size: 3.5em;
+            color: #ffffff;
             margin-bottom: 20px;
+            font-weight: bold;
         }
 
         .banner {
-            background-color: #e3f2fd;
+            background-color: #0000003b;
             padding: 20px;
+            color: white;
             border-radius: 8px;
             text-align: center;
             margin-bottom: 20px;
@@ -40,23 +46,24 @@
 
         .banner p {
             margin: 0;
-            font-size: 1.2em;
-            color: #333;
+            font-size: 1.3em;
+            color: #ffffff;
         }
 
         .card {
-            background-color: #fff;
+            background-color: #00000052;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px 1px white;
             padding: 20px;
             margin-bottom: 20px;
         }
 
         .card h2 {
-            font-size: 1.5em;
-            color: #1a73e8;
+            font-size: 2rem;
+            color: #ffffff;
             margin-bottom: 10px;
             text-align: center;
+            font-weight: bold;
         }
 
         .card ul {
@@ -67,7 +74,7 @@
         .card ul li {
             margin-bottom: 10px;
             font-size: 1em;
-            color: #333;
+            color: #ffffff;
         }
 
         .card ul li i {
@@ -84,7 +91,12 @@
 
         .event {
             font-size: 1em;
-            color: #333;
+            color: #ffffff;
+            p {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+            text-align: center;
         }
 
         .projects {
@@ -94,9 +106,9 @@
         }
 
         .project-card {
-            background-color: #fff;
+            background-color: #000000bd;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 4px 4px 0px 0px white;
             padding: 20px;
             width: 48%;
             margin-bottom: 20px;
@@ -113,14 +125,14 @@
         }
 
         .project-card h3 {
-            font-size: 1.2em;
+            font-size: 1.5em;
             color: #1a73e8;
             margin-bottom: 10px;
         }
 
         .project-card p {
             font-size: 1em;
-            color: #333;
+            color: #ffffff;
             margin-bottom: 10px;
         }
 
@@ -169,7 +181,7 @@
 
             <a href="/index.html"><img src="/img/icons/house.png"><span>Inicio</span></a>
             <a href="/problematica/problematica.html"><img src="/img/icons/warning.png"><span>Problematica</span></a>
-            <a href="/Accion/accion.html"><img src="/img/icons/soluciones.png"><span>Soluciones</span></a>
+            <a href="/Accion/accion.html"><img src="/img/icons/soluciones.png"><span>Acción</span></a>
             <a href="/recursos/tarjeta.html"><img src="/img/icons/recursos.png"><span>Recursos</span></a>
             <a href="/Equipo/equipo.html"><img src="/img/icons/team.png"><span>Equipo</span></a>
 
@@ -185,19 +197,19 @@
             <h2>Eventos y Campañas</h2>
             <div id="map"></div>
             <div class="event">
-                <p><i class="fas fa-map-marker-alt"></i> Limpieza de playa - 17/01/2025</p>
+                <p>🟢 Limpieza de playa - 17/01/2025</p>
             </div>
         </div>
         <div class="card">
             <h2>Acciones Concretas</h2>
             <ul>
-                <li><i class="fas fa-check-circle"></i>Reducir el uso de plásticos: Usa bolsas reutilizables y evita
+                <li>🟢 Reducir el uso de plásticos: Usa bolsas reutilizables y evita
                     productos de un solo uso.</li>
-                <li><i class="fas fa-check-circle"></i>Participar en limpiezas de playas: Súmate a iniciativas locales
+                <li>🟢 Participar en limpiezas de playas: Súmate a iniciativas locales
                     de recolección de basura.</li>
-                <li><i class="fas fa-check-circle"></i>Apoyar proyectos de conservación: Dona a organizaciones dedicadas
+                <li>🟢 Apoyar proyectos de conservación: Dona a organizaciones dedicadas
                     a la protección de la vida marina.</li>
-                <li><i class="fas fa-check-circle"></i>Consumir productos sostenibles: Elige alimentos y productos
+                <li>🟢 Consumir productos sostenibles: Elige alimentos y productos
                     certificados como eco-friendly.</li>
             </ul>
         </div>
@@ -211,7 +223,9 @@
                     <p>Restauración de praderas marinas en el Mediterráneo. Este proyecto se centra en la recuperación
                         de las praderas de Posidonia oceanica, una planta marina endémica del Mediterráneo que juega un
                         papel crucial en la salud del ecosistema marino.</p>
-                    <button onclick="window.location.href='https://example.com/proyecto-posidonia'">Leer más</button>
+                        <a href="https://www.saveposidoniaproject.org/es/sobre-el-proyecto/" target="_blank">  
+                            <button>Leer más</button>  
+                        </a>
                 </div>
                 <div class="project-card">
                     <img src="https://storage.googleapis.com/a1aa/image/4w87fAzPaS3cKS7boC5CaxSZD4CXPmNR5Umyigq55lxHgC5JA.jpg"
@@ -220,8 +234,10 @@
                     <p>Protección y rehabilitación de tortugas marinas. Este proyecto se dedica al rescate,
                         rehabilitación y liberación de tortugas marinas heridas o enfermas, así como a la protección de
                         sus hábitats naturales.</p>
-                    <button onclick="window.location.href='https://example.com/rescate-de-tortugas'">Leer más</button>
-                </div>
+                        <a href="https://fundacion-biodiversidad.es/proyectos_ficha/proyecto-reto-rescate-de-tortugas/" target="_blank">  
+                            <button>Leer más</button>  
+                        </a>
+                    </div>
                 <div class="project-card">
                     <img src="https://storage.googleapis.com/a1aa/image/huauVYAttCZDBRuJ6EbQuSaMLbdta9TOTPr5UFPAqpQDQh8E.jpg"
                         alt="Imagen del Coral Guardian">
@@ -229,8 +245,10 @@
                     <p>Restauración de arrecifes de coral en Indonesia. Este proyecto trabaja en la restauración de
                         arrecifes de coral dañados, promoviendo la biodiversidad marina y la sostenibilidad de las
                         comunidades locales.</p>
-                    <button onclick="window.location.href='https://example.com/coral-guardian'">Leer más</button>
-                </div>
+                        <a href="https://marine.copernicus.eu/es/servicios/mercados/educacion/coral-guardian" target="_blank">  
+                            <button>Leer más</button>  
+                        </a>
+                    </div>
                 <div class="project-card">
                     <img src="https://storage.googleapis.com/a1aa/image/3KZ6KQSqHcpHMNTqi4RIjmexN3RXeft65PSYXcOtZBGiAKknA.jpg"
                         alt="Imagen del Océanos Sin Plástico">
@@ -238,59 +256,32 @@
                     <p>Iniciativa global para reducir la contaminación plástica. Este proyecto se enfoca en la reducción
                         de residuos plásticos en los océanos a través de campañas de concienciación, limpieza de playas
                         y promoción de alternativas sostenibles.</p>
-                    <button onclick="window.location.href='https://example.com/oceanos-sin-plastico'">Leer más</button>
-                </div>
+                        <a href="https://www.goteo.org/project/un-oceano-sin-plastico" target="_blank">  
+                            <button>Leer más</button>  
+                        </a>
+                    </div>
             </div>
         </div>
     </div>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
-    <script>
-        var map = L.map('map').setView([-8.145097503370796, -79.05653641975886], 13);
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    // Crear el mapa centrado en el destino
+    var map = L.map('map').setView([-8.145097503370796, -79.05653641975886], 13);
 
-        var destination = L.marker([-8.145097503370796, -79.05653641975886]).addTo(map)
-            .bindPopup('Limpieza de playa - 17/01/2025')
-            .openPopup();
+    // Agregar capa base del mapa
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
-        map.locate({ setView: true, maxZoom: 16 });
-
-        function onLocationFound(e) {
-            var radius = e.accuracy / 2;
-
-            var userLocation = L.marker(e.latlng).addTo(map)
-                .bindPopup("Tu ubicación").openPopup();
-
-            L.circle(e.latlng, radius).addTo(map);
-
-            L.Routing.control({
-                waypoints: [
-                    L.latLng(e.latlng),
-                    L.latLng(-8.145097503370796, -79.05653641975886)
-                ],
-                routeWhileDragging: true,
-                createMarker: function (i, wp, nWps) {
-                    if (i === 0) {
-                        return L.marker(wp.latLng).bindPopup("Tu ubicación").openPopup();
-                    } else if (i === nWps - 1) {
-                        return L.marker(wp.latLng).bindPopup("Limpieza de playa").openPopup();
-                    }
-                },
-                show: false
-            }).addTo(map);
-        }
-
-        function onLocationError(e) {
-            alert(e.message);
-        }
-
-        map.on('locationfound', onLocationFound);
-        map.on('locationerror', onLocationError);
-    </script>
+    // Agregar marcador del destino con un popup
+    var destination = L.marker([-8.145097503370796, -79.05653641975886]).addTo(map)
+        .bindPopup('Limpieza de playa - 17/01/2025')
+        .openPopup();
+</script>
     <script src="/js/script.js"></script>
+    <script src="/js/btn_menu.js"></script>
+    
 </body>
 
 </html>

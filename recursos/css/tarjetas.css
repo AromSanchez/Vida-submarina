@@ -6,10 +6,13 @@
 }
 
 body {
-    background-color: #f0f9ff;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(/recursos/fondo.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -22,8 +25,9 @@ body {
 
 h1 {
     text-align: center;
-    color: #003366;
+    color: #ffffff;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .section {
@@ -31,7 +35,7 @@ h1 {
 }
 
 .section h2 {
-    color: #003366;
+    color: #ffffff;
     margin-bottom: 15px;
     font-size: 1.4em;
 }
