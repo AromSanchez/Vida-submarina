@@ -80,43 +80,41 @@
     <style>  
         /* Estilos del modal */  
         .modal {  
-                   position: fixed; /* Fijo en la pantalla */  
-                   z-index: 9999; /* Sobre otros contenidos */  
-                   left: 0;  
-                   top: 0;  
-                   width: 100%; /* Ancho completo */  
-                   height: 100%; /* Alto completo */  
-                   background-color: rgb(0, 0, 0); /* Fondo oscuro */  
-                   color: white; /* Texto blanco */  
-                   text-align: center; /* Centrado de texto */  
-                   opacity: 1; /* Inicialmente totalmente opaco */  
-               }  
-               .modal-content {  
-                   margin: auto; /* Centro el contenido */  
-                   padding: 80px; /* Aumentar el padding para más espacio interno */  
-                   border-radius: 20px; /* Bordes más redondeados */  
-                   background: rgba(255, 255, 255, 0.226); /* Fondo semi-transparente */  
-                   box-shadow: 0 0 30px rgb(0, 0, 0); /* Sombras más pronunciadas */  
-                   max-width: 800px; /* Ancho máximo del contenido aumentado */  
-                   position: relative; /* Posicionamiento relativo para el close button */   
-                   font-size: 1.5em; /* Aumentar tamaño de fuente para mejor legibilidad */  
-                   top: 50%; /* Centrado vertical */  
-                   transform: translateY(-50%); /* Ajustar posición para lograr un centrado verdadero */   
-                   font-weight: bold; /* Negrita */  
-                   color: white;
-                   z-index: 9999;
-                }  
-               .close {  
-                   position: absolute; /* Posicionamiento absoluto */  
-                   right: 20px; /* Alineación a la derecha */  
-                   top: 15px; /* Espaciado desde la parte superior */  
-                   color: white; /* Color del botón cerrar */  
-                   font-size: 36px; /* Tamaño de la fuente aumentado */  
-                   font-weight: bold; /* Negrita */  
-                   cursor: pointer; /* Mostrar indicador de puntero */  
-               }  
-
-           </style>
+            position: fixed; /* Fijo en la pantalla */  
+            z-index: 9999; /* Sobre otros contenidos */  
+            left: 0;  
+            top: 0;  
+            width: 100%; /* Ancho completo */  
+            height: 100%; /* Alto completo */  
+            background-color: black; /* Fondo oscuro */  
+            color: white; /* Texto blanco */  
+            text-align: center; /* Centrado de texto */  
+        }  
+        .modal-content {  
+            margin: auto; /* Centro el contenido */  
+            padding: 80px; /* Aumentar el padding para más espacio interno */  
+            border-radius: 20px; /* Bordes más redondeados */  
+            background: rgba(255, 255, 255, 0.226); /* Fondo semi-transparente */  
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.438); /* Sombras más pronunciadas */  
+            max-width: 1400px; /* Ancho máximo del contenido aumentado */  
+            position: relative; /* Posicionamiento relativo para el close button */  
+            font-size: 5em; /* Tamaño de fuente aumentado para mejor legibilidad */  
+            top: 50%; /* Centrado vertical */  
+            transform: translateY(-50%); /* Ajustar posición para lograr un centrado verdadero */  
+            font-weight: bold; /* Negrita */  
+            color: rgb(255, 255, 255);  
+            z-index: 9999;  
+        }  
+        .close {  
+            position: absolute; /* Posicionamiento absoluto */  
+            right: 20px; /* Alineación a la derecha */  
+            top: 15px; /* Espaciado desde la parte superior */  
+            color: white; /* Color del botón cerrar */  
+            font-size: 0px; /* Tamaño de la fuente del botón cerrar aumentado */  
+            font-weight: bold; /* Negrita */  
+            cursor: pointer; /* Mostrar indicador de puntero */  
+        }  
+    </style>
 <!-- Pantalla emergente -->  
 <div class="modal" id="myModal">  
     <div class="modal-content">  
@@ -132,7 +130,7 @@
     <script src="/js/openDialog.js"></script>  
 
     <script>  
-        const message = "Protege los océanos, preserva nuestro futuro";  
+        const message = "PROTEGE LOS OCÉANOS, PRESERVA NUESTRO FUTURO";  
         
         function showModal() {  
             const modal = document.getElementById("myModal");  
@@ -142,7 +140,7 @@
             modal.style.display = "block"; // Mostrar el modal  
     
             // Cambiar el foco en el fondo  
-            document.body.style.opacity = "0.5"; // Cambiar la opacidad del fondo  
+            document.body.style.opacity = "0.8"; // Cambiar la opacidad del fondo  
             document.body.style.pointerEvents = "none"; // Desactivar interacciones en el fondo  
     
             let index = 0; // Índice de la letra actual  
@@ -155,15 +153,22 @@
                 }  
             }  
             typeLetter(); // Iniciar la animación  
-        }  
     
-        document.getElementById("closeModal").onclick = function() {  
+            // Cerrar el modal después de 15 segundos  
+            setTimeout(() => {  
+                closeModal();  
+            }, 5400); // 15000 ms = 15 segundos  
+        }  
+        
+        function closeModal() {  
             const modal = document.getElementById("myModal");  
             modal.style.display = "none"; // Ocultar el modal  
             document.body.style.opacity = "1"; // Restaurar opacidad del fondo  
             document.body.style.pointerEvents = "auto"; // Restaurar interacciones en el fondo  
         }  
     
+        document.getElementById("closeModal").onclick = closeModal;  
+        
         window.onload = showModal; // Mostrar el modal al cargar la página  
     </script>
 </body>
